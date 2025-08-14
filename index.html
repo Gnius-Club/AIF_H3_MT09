@@ -1,24 +1,283 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playbook — 3º Preparatoria — Misión M09: Vibe Coding: Dando Vida con JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M09: Vibe Coding: Dando Vida con JavaScript</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info">
+        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+      <!-- 0) De un Vistazo -->
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M09: Vibe Coding: Dando Vida con JavaScript</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables.</p>
+        <div class="overview">
+          <section class="overview-block">
+            <h3>Objetivos e “I Can”</h3>
+            <ul>
+              <li>Puedo generar código JavaScript para manipular el DOM y añadir interactividad a componentes frontend.</li>
+              <li>Puedo dirigir a una IA para obtener código JS "vanilla" y comprender su funcionamiento.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Secuencia y tiempos</h3>
+            <ol>
+              <li>Saludo Interactivo con IA — 3 min</li>
+              <li>“I Can” + Desafío — 5–7 min</li>
+              <li>AI GYM — 10–12 min</li>
+              <li>Brain Spark — 17–20 min</li>
+              <li>GNIUS STORM — 5 min</li>
+            </ol>
+          </section>
+          <section class="overview-block">
+            <h3>Entregable del Micro-Proyecto</h3>
+            <ul>
+              <li>Un prompt para generar código JavaScript que añada interactividad a tu componente, y el Pen final en CodePen/JSFiddle que ahora incluye HTML, CSS y JS funcional.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Criterios de calidad</h3>
+            <ul>
+              <li>Claridad del prompt para la generación de JS.</li>
+              <li>Funcionalidad del código JS generado (manipulación del DOM).</li>
+              <li>Integración exitosa de HTML, CSS y JS en CodePen/JSFiddle.</li>
+              <li>Comprensión del código JS "vanilla" (evidencia de comentarios o explicación).</li>
+              <li>Propuesta de nuevas funcionalidades interactivas o prueba de usabilidad.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Materiales y preparación</h3>
+            <ul>
+              <li>Proyector e internet</li>
+              <li>CodePen / JSFiddle</li>
+              <li>LLM (e.g., ChatGPT, Bard, Claude)</li>
+              <li>Ejemplo mínimo listo: Un componente HTML/CSS básico listo para añadir interactividad JS.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- 1) Saludo Interactivo con IA -->
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y su valor profesional (Columna 1).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo: hoy daremos vida a nuestros diseños frontend. Pasaremos de componentes estáticos a experiencias interactivas, utilizando JavaScript. Nuestra meta es dirigir a la IA para generar este código y comprender cómo funciona para añadir funcionalidad.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M09: Vibe Coding: Dando Vida con JavaScript. Necesito foco en interactividad frontend y manipulación del DOM.”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas, enfocándose en la creación de interactividad con JavaScript.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 2) “I Can” + Desafío -->
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable (Columnas 1 y 3).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El reto de hoy es transformar un componente estático en uno interactivo utilizando JavaScript. Evaluaremos la funcionalidad del código generado por la IA y su integración en un entorno de desarrollo frontend.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” alineado al entregable (Columna 2).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo [generar código JS] usando [prompts claros] para lograr [interactividad en mi componente].”</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 3) AI GYM -->
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día: JavaScript y manipulación del DOM</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce JavaScript para la interactividad y la manipulación del DOM, explicando la importancia del JS "vanilla".</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Hoy, Xolo completa la tríada del frontend introduciendo JavaScript para la interactividad. No necesitamos librerías complejas para empezar; el JS "vanilla" es la base. Este marco agrega valor porque permite que nuestros componentes respondan a las acciones del usuario. Eviten la sobre-dependencia de frameworks sin entender los fundamentos y no asuman que el código generado por IA es perfecto. Usen la comprensión del DOM para validar resultados.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración: Generación de JS con LLM</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Demuestra cómo pedirle a un LLM que escriba JS "vanilla" para manipular el DOM. Usa el ejemplo: "Escribe el código JavaScript para que al hacer clic en el botón con id 'toggle-button', el texto dentro del div con id 'info-box' cambie de 'Hola' a 'Adiós'". Enseña a pedir código comentado.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observen cómo podemos guiar a un LLM para generar código funcional. Fíjense en el uso de `document.getElementById()`, `addEventListener()` y `textContent`. Verifiquen que el código sea legible y que los comentarios faciliten su comprensión. ¿El código es claro? ¿Manipula el DOM como esperamos?</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Qué método de JavaScript usamos para seleccionar un elemento HTML por su ID? Pregunta 2: ¿Por qué es importante pedir a la IA que comente el código generado?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 4) Brain Spark -->
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción del componente interactivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Como "Desarrollador de Interacción", crea un prompt para generar código JavaScript que añada interactividad a tu componente HTML/CSS existente. Genera el JS y crea un Pen final en CodePen/JSFiddle que incluya HTML, CSS y JS funcional. Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración con criterios</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Pide a la IA una mejora concreta para tu componente interactivo (ej.: añadir una segunda funcionalidad, refactorizar el código para mayor legibilidad, añadir más comentarios).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida que tu componente responda a la interacción esperada y que el código JS sea comprensible. Si no se cumple, ajusta tu prompt o el código y vuelve a probar.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia de resultado</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita la URL de tu CodePen/JSFiddle. Opcionalmente, crea un GIF corto demostrando su funcionamiento o propone tres nuevas funcionalidades interactivas.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega la URL de tu CodePen/JSFiddle con el componente interactivo. Si lo deseas, puedes adjuntar un GIF o una lista de ideas para futuras interacciones.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 5) GNIUS STORM -->
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 personas/equipos muestran evidencia (30–45 s c/u): decisión clave del prompt, criterio de éxito y prueba de interactividad.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en la interactividad que lograste, el prompt que usaste y cómo la IA te ayudó a darle vida a tu componente.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje clave del marco, 1 criterio que más impactó, 1 siguiente paso aplicable (p. ej., explorar más el DOM, añadir eventos complejos).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: [aprendizaje clave sobre JS y DOM]. Criterio clave: [la importancia de la claridad en el prompt]. Siguiente paso aplicado: [explorar la manipulación de clases CSS con JS para animaciones].</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
