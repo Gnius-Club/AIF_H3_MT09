@@ -1,293 +1,442 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Playbook: Sesión 9 - 3ro Preparatotia.</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P3-TM09</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 9 - 3ro Preparatotia.</strong></h1>
-    <div class="header-widgets">
-      <div class="timer-container">
-        <span id="timer">⏱️ 00:00</span>
-        <button id="startStop">Start</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle-input">
-          <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-      </div>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 9 - 3o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar WebWave y JDoodle para manipular el DOM mediante eventos de clic y comprender la relación acción-respuesta y el diseño de interacción centrado en el usuario.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame qué es el DOM y cómo JavaScript puede modificarlo para crear interactividad en una página web. ¿Puedes darme un ejemplo simple de cómo un evento como un clic cambia el contenido de un elemento?</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Interacción Digital: Es como cuando tocas un interruptor y se prende la luz; en una web, es hacer que algo cambie cuando el usuario hace una acción.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar JavaScript para cambiar elementos de una página web cuando alguien hace clic.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes IDs y clases de elementos para entender cómo JS identifica qué parte de la web modificar.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadora con acceso a internet (1 por estudiante)</label>
+                        <label><input type="checkbox"> Acceso a WebWave (https://webwave.me/), JDoodle (https://www.jdoodle.com/), GitHub y herramientas de IA (ChatGPT/Gemini/Claude)</label>
+                        <label><input type="checkbox"> Libreta de notas para planear interacciones</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con CÓDIGO (JavaScript) en JDoodle/WebWave</label>
+                        <label><input type="checkbox"> 📋 Para integrar JS: En WebWave → Configuración de página → Agregar código personalizado</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Recuerda: Mantener tu espacio de trabajo limpio, cuidar tu computadora y cerrar tus sesiones de software al terminar.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la manipulación del DOM y eventos (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el código JS no funciona:</strong> Revisar que los IDs en el HTML sean idénticos a los usados en document.getElementById().</li> <li><strong>Si el evento no se dispara:</strong> Verificar que el script esté correctamente vinculado o colocado antes del cierre de la etiqueta body.</li> <li><strong>Si hay errores de sintaxis:</strong> Copiar el error de la consola del navegador y pegarlo en el chat con XOLO para que te ayude.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos vida y movimiento a sus páginas web!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Manipulación del DOM e interactividad con JavaScript.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A programar eventos de clic para que sus sitios web respondan a los usuarios.</p>
+                        <p><strong>Aplicación real:</strong> Los desarrolladores web en empresas como Netflix o Instagram usan esta tecnología para que los botones realicen acciones inmediatas sin recargar la página.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo JavaScript puede 'escuchar' lo que hace el usuario en la pantalla.</li>
+                            <li>Introduce el concepto de DOM como el mapa de una página web que podemos cambiar.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar JavaScript para detectar clics.</li>
+                            <li>Aprender sobre la relación entre acciones del usuario y respuestas del sitio.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar JavaScript para manipular el DOM y crear interactividad.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a aprender cómo hacer que nuestras páginas web dejen de ser estáticas y empiecen a reaccionar. Abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él sobre cómo JavaScript se conecta con el HTML. Pregúntenle qué es el DOM y cómo un simple clic puede cambiar un texto o un color. Aprovechen para despejar cualquier duda técnica que tengan sobre cómo JS 've' los elementos de su página.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Computadoras conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique interactividad con JS vanilla.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar eventos de clic en su componente.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Integrar el código JS en su proyecto de WebWave y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a agregar interactividad con JS “vanilla” a mi componente: define el evento (clic), el elemento objetivo y el cambio visible (texto/estado/mostrar-ocultar). Pide el código comentado y valida que coincida con mis ids/clases. Ejecuta: entrega el prompt final de JS + un mini plan de prueba (3 clics/estados esperados) antes de cerrar mi Pen funcional."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El elemento cambia exactamente cuando haces clic?</li>
+                            <li>¿Qué pasa si el ID del elemento en el HTML no coincide exactamente con el que usaste en JavaScript?</li>
+                            <li>¿Funciona igual si haces clic rápido varias veces seguidas?</li>
+                            <li>¿Cómo ayuda el cambio visual a que el usuario sepa que su acción tuvo un efecto (relación acción-respuesta)?</li>
+                            <li>¿Por qué es importante que los IDs y clases sean claros para asegurar la verificabilidad del código?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a pasar de la teoría a la práctica. El flujo es sencillo: ideen con XOLO, definan el VIBE de su interacción, obtengan su GCS, llévenlo a WebWave o JDoodle y experimenten. Por ejemplo, podrían crear un botón que al presionarlo muestre un mensaje secreto o cambie el tema de oscuro a claro. Recuerden usar las preguntas de experimentación para validar su trabajo. No olviden verificar que sus IDs coincidan perfectamente. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su código JavaScript en un segundo.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con un clic básico. ¿Puedes enseñarme cómo hacer que mi página web cambie varios elementos al mismo tiempo o use un evento diferente como pasar el mouse por encima?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué elementos de su DOM cambian bien al interactuar.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué elementos visuales cambiaron mejor en tu página? ¿Qué te sorprendió de la velocidad de respuesta?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi página web cambia el texto del encabezado al hacer clic. Me sorprendió que el código fuera tan corto para lograr ese efecto."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </header>
-  <div class="main-container">
-    <aside class="activity-list">
-      <h2>Actividades</h2>
-      <ul>
-        <li><a href="#activity-0">📝</a></li>
-        <li><a href="#activity-1">1</a></li>
-        <li><a href="#activity-2">2</a></li>
-        <li><a href="#activity-3">3</a></li>
-        <li><a href="#activity-4">4</a></li>
-        <li><a href="#activity-5">5</a></li>
-      </ul>
-      <div class="sidebar-info">
-        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-      </div>
-    </aside>
-    <main class="content">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-      <!-- 0) De un Vistazo -->
-      <section class="activity-card" id="activity-0">
-        <h2 class="activity-title"><span class="book-icon">📝</span> De un Vistazo: Sesión 9 - 3ro Preparatotia.</h2>
-        <p class="overview-subtitle">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-        <div class="overview-table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                        <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong>Objetivos de aprendizaje:</strong>
-                            <p>Al final de la sesión, los estudiantes podrán:</p>
-                            <ul>
-                                <li>Generar código JavaScript "vanilla" para manipular el DOM y añadir interactividad a sus componentes web.</li>
-                                <li>Dirigir a una IA para que escriba código comentado que responda a eventos del usuario, como un clic.</li>
-                                <li>Comprender cómo las acciones del usuario pueden ejecutar un script para modificar el contenido de una página.</li>
-                                <li><strong>Objetivo general de la sesión:</strong> Que los estudiantes aprendan a completar la tríada del frontend, utilizando Vibe Coding para generar código JavaScript que añada interactividad y funcionalidad a sus componentes web.</li>
-                            </ul>
-                            <strong>Secuencia Didáctica:</strong>
-                            <ol>
-                              <li><strong>Actividad 1:</strong> Saludo Interactivo con IA — 3 min</li>
-                              <li><strong>Actividad 2:</strong> “I Can” + Desafío — 5–7 min</li>
-                              <li><strong>Actividad 3:</strong> AI GYM — 10–12 min</li>
-                              <li><strong>Actividad 4:</strong> Brain Spark — 17–20 min</li>
-                              <li><strong>Actividad 5:</strong> GNIUS STORM — 5 min</li>
-                            </ol>
-                            <strong>Entregable Clave:</strong>
-                            <ul>
-                              <li>Un prompt para generar código JavaScript que añada interactividad a tu componente, y el Pen final en CodePen/JSFiddle que ahora incluye HTML, CSS y JS funcional.</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <strong>Criterios de calidad:</strong>
-                            <ul>
-                              <li>Claridad del prompt para la generación de JS.</li>
-                              <li>Funcionalidad del código JS generado (manipulación del DOM).</li>
-                              <li>Integración exitosa de HTML, CSS y JS en CodePen/JSFiddle.</li>
-                              <li>Comprensión del código JS "vanilla" (evidencia de comentarios o explicación).</li>
-                              <li>Propuesta de nuevas funcionalidades interactivas o prueba de usabilidad.</li>
-                            </ul>
-                            <strong>Materiales y preparación:</strong>
-                            <ul>
-                              <li>Proyector e internet</li>
-                              <li>CodePen / JSFiddle</li>
-                              <li>LLM (e.g., ChatGPT, Bard, Claude)</li>
-                              <li>Ejemplo mínimo listo: Un componente HTML/CSS básico listo para añadir interactividad JS.</li>
-                              <li>Presentación (10 diapositivas)</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-      </section>
-      <!-- 1) Saludo Interactivo con IA -->
-      <section class="activity-card" id="activity-1">
-        <h2 class="activity-title">Saludo Interactivo con IA</h2>
-        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 2) Presenta el tema y su valor profesional.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Equipo: hoy daremos vida a nuestros diseños frontend. Pasaremos de <strong>componentes estáticos</strong> a <strong>experiencias interactivas</strong>, utilizando <strong>JavaScript</strong>. Nuestra meta es dirigir a la IA para generar este código y comprender cómo funciona para añadir <strong>funcionalidad</strong>.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-              <p class="step-instructions">Cada estudiante envía a Xolo: <strong>“Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la sesión de Vibe Coding para JavaScript. Necesito foco en interactividad frontend y manipulación del DOM.”</strong></p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas, enfocándose en la creación de <strong>interactividad</strong> con <strong>JavaScript</strong>.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 2) “I Can” + Desafío -->
-      <section class="activity-card" id="activity-2">
-        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
-        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 3) Describe el reto y la meta observable.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">El reto de hoy es transformar un <strong>componente estático</strong> en uno <strong>interactivo</strong> utilizando <strong>JavaScript</strong>. Evaluaremos la funcionalidad del código generado por la IA y su integración en un entorno de desarrollo frontend.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 4) Cada estudiante redacta 1 “I Can” alineado al entregable.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo generar <strong>código JS</strong> usando <strong>prompts claros</strong> para lograr <strong>interactividad</strong> en mi componente.”</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 3) AI GYM -->
-      <section class="activity-card" id="activity-3">
-        <h2 class="activity-title">AI GYM</h2>
-        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Marco del día: JavaScript y manipulación del DOM</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 5) Introduce JavaScript para la interactividad y la manipulación del DOM, explicando la importancia del JS "vanilla".</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Hoy, Xolo completa la <strong>tríada del frontend</strong> introduciendo <strong>JavaScript</strong> para la <strong>interactividad</strong>. No necesitamos librerías complejas para empezar; el <strong>JS "vanilla"</strong> es la base. Este marco agrega valor porque permite que nuestros componentes respondan a las <strong>acciones del usuario</strong>. Eviten la sobre-dependencia de frameworks sin entender los fundamentos y no asuman que el código generado por IA es perfecto. Usen la comprensión del <strong>DOM</strong> para validar resultados.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Mini-demostración: Generación de JS con LLM</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 6) Demuestra cómo pedirle a un LLM que escriba JS "vanilla" para manipular el DOM y cómo pedir código comentado.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant"><strong>“Xolo, explícame qué es el DOM y cómo JavaScript puede modificarlo para crear interactividad en una página web. ¿Puedes darme un ejemplo simple de cómo un evento como un clic cambia el contenido de un elemento?”</strong></p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Check rápido</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 7) Verifica comprensión con 2 preguntas breves.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Pregunta 1: ¿Qué método de JavaScript usamos para seleccionar un elemento HTML por su <strong>ID</strong>? Pregunta 2: ¿Por qué es importante pedir a la IA que comente el <strong>código generado</strong>?</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 4) Brain Spark -->
-      <section class="activity-card" id="activity-4">
-        <h2 class="activity-title">Brain Spark</h2>
-        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Producción del componente interactivo</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 8) Como "Desarrollador de Interacción", crea un prompt para generar código JavaScript que añada interactividad a tu componente HTML/CSS existente. Genera el JS y crea un Pen final en CodePen/JSFiddle que incluya HTML, CSS y JS funcional. Tiempo de trabajo autónomo.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">N/A</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Iteración con criterios</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 9) Pide a la IA una mejora concreta para tu componente interactivo.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Antes de cerrar: valida que tu componente responda a la <strong>interacción esperada</strong> y que el <strong>código JS</strong> sea comprensible. Si no se cumple, ajusta tu prompt o el código y vuelve a probar.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Evidencia de resultado</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 10) Solicita la URL de tu CodePen/JSFiddle.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Entrega la URL de tu CodePen/JSFiddle con el componente interactivo. Si lo deseas, puedes adjuntar un GIF o una lista de ideas para futuras interacciones.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <!-- 5) GNIUS STORM -->
-      <section class="activity-card" id="activity-5">
-        <h2 class="activity-title">GNIUS STORM</h2>
-        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-              <p class="step-instructions">2–3 personas/equipos muestran evidencia (30–45 s c/u): decisión clave del prompt, criterio de éxito y prueba de interactividad.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Enfoca tu presentación en la <strong>interactividad</strong> que lograste, el <strong>prompt</strong> que usaste y cómo la IA te ayudó a darle vida a tu componente.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 11) Realiza la síntesis de la sesión.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Síntesis: El aprendizaje clave fue cómo <strong>JavaScript</strong> manipula el <strong>DOM</strong> para crear <strong>interactividad</strong>. El criterio clave fue la claridad del <strong>prompt</strong> para obtener <strong>código funcional</strong>. Siguiente paso aplicado: explorar la manipulación de <strong>clases CSS</strong> con <strong>JS</strong> para animaciones.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html></html>
